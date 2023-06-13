@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sneakers</title>
+</head>
+<body>
+    <h1>All Sneakers</h1>
+    <ul>
+        <!-- <% sneakers.forEach((s) => { %>
+            <li>
+                <%= s.sneaker %>
+                    -
+                <%= s.owned ? 'Owned' : 'Not Owned' %>
+            </li>
+        <% }); %> -->
+
+        <% sneakers.forEach((s) => { %>
+            <li>
+                <%- include('sneaker/index', {sneaker: sneaker}) %>
+            </li>
+        <% }) %>
+    </ul>
+</body>
+</html>
