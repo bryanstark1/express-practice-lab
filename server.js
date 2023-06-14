@@ -14,7 +14,9 @@ app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
 // Mount middleware (app.use)
-
+// https://stackoverflow.com/questions/18629327/adding-css-file-to-ejs
+// Directory where static files are located
+app.use(express.static(__dirname + '/'))
 
 // Mount routes
 // Define a 'root' route directly on app
